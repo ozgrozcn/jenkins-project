@@ -33,7 +33,8 @@ pipeline {
 			sh 'python condition.py'
 			sh 'ls -l'
 			sh ''' 
-			echo "multiline"
+			echo "OS INFORMATIONS:"
+			cat /etc/os-release
 			'''
 			echo 'Result' 
 		      }
