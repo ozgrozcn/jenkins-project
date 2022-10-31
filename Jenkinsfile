@@ -27,6 +27,17 @@ pipeline {
 		      echo 'Functional Test is done'
 		      }
 	      }
+	      stage('delivery') {
+		      steps{ 
+		      	echo 'Date detection'
+			bash 'python condition.py'
+			sh 'ls -l'
+			sh ''' 
+			echo "multiline"
+			'''
+			echo 'Result' 
+		      }
+	      }
 	}
 
 
