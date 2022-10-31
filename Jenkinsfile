@@ -10,6 +10,14 @@ pipeline {
 			}
 
 		}
+	stage('deploy'){
+		steps{
+			echo 'Deployment process is starting..'
+			sh 'python loops.py'
+			sh 'echo "Connecting to server..."'
+			sh 'echo "Codes are deployed"'
+			}
+		}
 
 
 	}
