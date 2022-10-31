@@ -5,3 +5,4 @@ while i<12:
   j+=i
   i+=1
   print("Result: {}".format(j))
+print("The loop has finished")
