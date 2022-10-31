@@ -18,8 +18,15 @@ pipeline {
 			sh 'echo "Codes are deployed"'
 			}
 		}
-
-
+	      stage('test') {
+		      steps{
+		      echo 'Unit Test is applying'
+		      sh 'echo "Results are correct"'
+	              echo 'Unit Test is done'
+		      echo 'Funtctional Test is applying'
+		      echo 'Functional Test is done'
+		      }
+	      }
 	}
 
 
