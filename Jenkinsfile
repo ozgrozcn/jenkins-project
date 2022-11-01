@@ -41,7 +41,11 @@ pipeline {
 			df -h
 			'''
 			echo "RAM USAGE:"
-			sh 'free -h'
+			sh '''
+			sudo yum update -y
+			sudo yum install free -y
+			free -h
+			'''
 			echo 'Finished' 
 		      }
 	      }
