@@ -12,7 +12,7 @@ pipeline {
 		}
 	     stage('deploy'){
 			steps{
-			sh 'ssh -i ozguro.pem ec2-user@3.80.147.145'
+			sh 'ssh -i "ozguro.pem" ec2-user@ec2-3-84-0-117.compute-1.amazonaws.com'
 			echo 'Deployment process is starting..'
 		        sh 'hostname'
 			sh 'python loops.py'
