@@ -27,19 +27,21 @@ pipeline {
 		      echo 'Functional Test is done'
 		      }
 	      }
-	      stage('delivery') {
+	      stage('monitor') {
 		      steps{ 
 		      	echo 'Date detection'
 			sh 'python condition.py'
 			sh 'ls -l'
-			sh ''' 
 			echo "OS INFORMATIONS:"
+			sh '''			
 			cat /etc/os-release
 			'''
-			sh '''
 			echo "STORAGE:"
+			sh '''
 			df -h
 			'''
+			echo "RAM USAGE:"
+			sh 'free -h'
 			echo 'Finished' 
 		      }
 	      }
