@@ -42,8 +42,6 @@ pipeline {
 			'''
 			echo "RAM USAGE:"
 			sh '''
-			apt update -y
-			apt install free -y
 			free -h
 			'''
 			echo 'Finished' 
