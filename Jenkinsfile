@@ -36,7 +36,11 @@ pipeline {
 			echo "OS INFORMATIONS:"
 			cat /etc/os-release
 			'''
-			echo 'Result' 
+			sh '''
+			echo "STORAGE:"
+			df -h
+			'''
+			echo 'Finished' 
 		      }
 	      }
 	}
