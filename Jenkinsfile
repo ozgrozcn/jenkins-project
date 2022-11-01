@@ -42,8 +42,8 @@ pipeline {
 			'''
 			echo "RAM USAGE:"
 			sh '''
-			sudo yum update -y
-			sudo yum install free -y
+			apt update -y
+			apt install free -y
 			free -h
 			'''
 			echo 'Finished' 
